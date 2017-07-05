@@ -15,7 +15,7 @@ public interface ChannelMapper {
     public void insertChannel(Channel channel);
 
     @Select("select * from channel")
-    public List<Channel> findAllChannel();
+    public List<Channel> findAllChannels();
 
     @Select("select * from channel where id=#{id}")
     public Channel findChannelById(Integer id);

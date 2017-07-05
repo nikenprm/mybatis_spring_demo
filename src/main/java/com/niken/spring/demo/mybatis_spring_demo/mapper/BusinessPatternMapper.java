@@ -1,6 +1,8 @@
 package com.niken.spring.demo.mybatis_spring_demo.mapper;
 
 import com.niken.spring.demo.mybatis_spring_demo.model.BusinessPattern;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -13,7 +15,7 @@ public interface BusinessPatternMapper {
     public void insertBusinessPattern(BusinessPattern businessPattern);
 
     @Select("select * from business_pattern")
-    public List<BusinessPattern> findAllBusinessPattern();
+    public List<BusinessPattern> findAllBusinessPatterns();
 
     @Select("select * from business_pattern where id=#{id}")
     public BusinessPattern findBusinessPatternById(Integer id);
