@@ -34,4 +34,9 @@ public class BusinessPatternServiceImpl implements BusinessPatternService{
     public BusinessPattern findBusinessPatternById(Integer id) {
         return businessPatternMapper.findBusinessPatternById(id);
     }
+
+    @Override
+    public void deleteBusinessPatternById(Integer id) {
+        businessPatternMapper.deleteBusinessPatternById(id);
+    }
 }

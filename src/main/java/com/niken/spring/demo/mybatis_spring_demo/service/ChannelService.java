@@ -15,4 +15,6 @@ public interface ChannelService {
     public List<Channel> findAllChannels();
 
     public Channel findChannelById(Integer id);
+
+    public void deleteChannelById(Integer id);
 }

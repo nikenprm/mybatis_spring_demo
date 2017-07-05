@@ -1,6 +1,7 @@
 package com.niken.spring.demo.mybatis_spring_demo.mapper;
 
 import com.niken.spring.demo.mybatis_spring_demo.model.BusinessPattern;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -19,4 +20,7 @@ public interface BusinessPatternMapper {
 
     @Select("select * from business_pattern where id=#{id}")
     public BusinessPattern findBusinessPatternById(Integer id);
+
+    @Delete("delete from business_pattern where id=#{id}")
+    public void deleteBusinessPatternById(Integer id);
 }

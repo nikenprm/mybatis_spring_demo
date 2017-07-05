@@ -40,5 +40,13 @@ public class BusinessPatternController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @RequestMapping(value = "/pattern/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteBusinessPatternById(@PathVariable int id) {
+        Integer businessPatternId = (Integer) id;
+
+        businessPatternService.deleteBusinessPatternById(businessPatternId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
     
 }

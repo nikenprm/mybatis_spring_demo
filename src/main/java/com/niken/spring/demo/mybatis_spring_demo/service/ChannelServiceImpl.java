@@ -34,4 +34,9 @@ public class ChannelServiceImpl implements ChannelService{
     public Channel findChannelById(Integer id) {
         return channelMapper.findChannelById(id);
     }
+
+    @Override
+    public void deleteChannelById(Integer id) {
+        channelMapper.deleteChannelById(id);
+    }
 }

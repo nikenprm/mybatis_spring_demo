@@ -15,4 +15,6 @@ public interface BusinessPatternService {
     public List<BusinessPattern> findAllBusinessPatterns();
 
     public BusinessPattern findBusinessPatternById(Integer id);
+
+    public void deleteBusinessPatternById(Integer id);
 }

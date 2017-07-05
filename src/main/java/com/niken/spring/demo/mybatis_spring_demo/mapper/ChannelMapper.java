@@ -1,6 +1,7 @@
 package com.niken.spring.demo.mybatis_spring_demo.mapper;
 
 import com.niken.spring.demo.mybatis_spring_demo.model.Channel;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -19,5 +20,8 @@ public interface ChannelMapper {
 
     @Select("select * from channel where id=#{id}")
     public Channel findChannelById(Integer id);
+
+    @Delete("delete from channel where id=#{id}")
+    public void deleteChannelById(Integer id);
 
 }

@@ -41,4 +41,12 @@ public class ChannelController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @RequestMapping(value = "/channel/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteChannelById(@PathVariable int id) {
+        Integer channelId = (Integer) id;
+
+        channelService.deleteChannelById(channelId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
