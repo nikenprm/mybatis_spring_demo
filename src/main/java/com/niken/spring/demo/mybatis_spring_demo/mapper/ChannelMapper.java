@@ -12,10 +12,12 @@ import java.util.List;
 public interface ChannelMapper {
 
     @Insert("insert into channel(name) values(#{name})")
-    public void insertChannel(Channel channel);git stom channel")
-    public List<Channel> findAllChannel();
+    public void insertChannel(Channel channel);
 
     @Select("select * from channel")
+    public List<Channel> findAllChannel();
+
+    @Select("select * from channel where id=#{id}")
     public Channel findChannelById(Integer id);
 
 }
